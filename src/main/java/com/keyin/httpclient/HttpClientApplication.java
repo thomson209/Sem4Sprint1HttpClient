@@ -14,7 +14,7 @@ public class HttpClientApplication {
         try {
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
             if (response.statusCode()==200) {
-                System.out.println("*****" + response.body());
+                System.out.println(response.body());
             }
 
         } catch (IOException | InterruptedException e) {
